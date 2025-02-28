@@ -9,6 +9,7 @@ class Student () {
     var rost: Int = 182
     var ves: Int = 88
     var vidsporta: String = "Кикбоксинг"
+    var sumrost: Double =0.0
 
     fun Infa() {
         println("$familia $name $dadname принадлежит по половому признаку к группе $pol, а обучается в группе $gruppa," +
@@ -23,25 +24,24 @@ class Student () {
             }
         }
     }//Выводит информацию о студенте
-    fun srrost() {
-        println("Введите число средний рост из какого количества людей вы хотите узнать")
-        var x = readln().toInt()
-        when(x) {
-            0->{
-                println("Средний рост среди не был посчитан в связи с тем что вы не вели ни одного человека")
-            }
-            else->{
+    fun srrost(){
+    var x = readln().toInt()
+    when(x) {
+        0->{
+            println("Средний рост среди не был посчитан в связи с тем что вы не вели ни одного человека")
+        }
+        else->{
             var sum = 0.0
             for (i in 1..x) {
                 println("Введите рост $i-ого человека")
                 var st = readln().toDouble()
                 sum += st.toDouble()
             }
-                sum = sum / x
-                println("Средний рост среди $x человек = $sum сантиметров")
-            }
+            sum = sum / x
+            println("Средний рост среди $x человек = $sum сантиметров")
         }
-    }//Выводит средний рост людей пользователя
+    }
+}//Выводит средний рост людей пользователя
 
     fun Izmenenia() {
         try {

@@ -3,6 +3,7 @@ fun main()
     try
     {
         val bob: Student = Student()
+        for (p in 1..10){
         bob.Infa()
         var j =2
         var i=1
@@ -12,8 +13,16 @@ fun main()
             var x = readln().toInt()
             when (x) {
                 0 -> {
-                    println("Конец программы")
-                    i+=1
+                    when(p) {
+                        10->{
+                            bob.srrost()
+                            println("Конец программы")
+                        }
+                        else-> {
+                            println("Конец программы для $p студента")
+                            i += 1
+                        }
+                    }
                 }
                 1 -> {
                     bob.Izmenenia()
@@ -23,12 +32,12 @@ fun main()
                 }
                 3 ->{
                     bob.Infa()
-                    bob.srrost()
                 }
                 else -> {
                     println("Такого варианта ответа не существует")
                 }
             }
+        }
         }
     }
     catch (e:NumberFormatException)
